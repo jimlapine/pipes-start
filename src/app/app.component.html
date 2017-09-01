@@ -12,10 +12,10 @@
           </span>
           <!-- add uppercase pipe -->
           <!-- add custom shorten pipe, see shorten.pipe.ts, also register in app.component.ts -->
-          <strong>{{ server.name | shorten }}</strong> |
+          <strong>{{ server.name | shorten:20 }}</strong> |
           {{ server.instanceType | uppercase }} |
           <!-- add date pipe w/parameter -->
-          {{ server.started | date:'fullDate' }}
+          {{ server.started | date:'fullDate' | shorten:20}}
         </li>
       </ul>
     </div>
