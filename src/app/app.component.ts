@@ -39,6 +39,17 @@ export class AppComponent {
     }
   ];
 
+  filteredStatus = '';
+
+  onAddServer() {
+    this.servers.push(    {
+      instanceType: 'small',
+      name: 'New Database',
+      status: 'stable',
+      started: new Date()
+    });
+  }
+
   getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
     return {
       'list-group-item-success': server.status === 'stable',
