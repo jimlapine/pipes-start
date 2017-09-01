@@ -9,6 +9,12 @@ export class AppComponent {
   servers = [
     {
       instanceType: 'medium',
+      name: 'Fb',
+      status: 'stable',
+      started: new Date(2017, 0, 1)
+    },
+    {
+      instanceType: 'medium',
       name: 'Production Server',
       status: 'stable',
       started: new Date(2017, 8, 1)

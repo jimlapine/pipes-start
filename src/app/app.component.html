@@ -11,7 +11,8 @@
             {{ server.status }}
           </span>
           <!-- add uppercase pipe -->
-          <strong>{{ server.name }}</strong> |
+          <!-- add custom shorten pipe, see shorten.pipe.ts, also register in app.component.ts -->
+          <strong>{{ server.name | shorten }}</strong> |
           {{ server.instanceType | uppercase }} |
           <!-- add date pipe w/parameter -->
           {{ server.started | date:'fullDate' }}
