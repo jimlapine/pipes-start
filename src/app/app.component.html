@@ -7,7 +7,10 @@
       <br>
       <button type="button" class="btn btn-primary"
         (click)="onAddServer()">Add Server</button>
-
+      <br>
+      <!-- add asynchornous pipe to watch for asynchronous changes -->
+      <!-- this works with pormisies and observables -->
+      <h2>App status: {{ appStatus | async }}</h2>
       <hr>
       <ul class="list-group">
         <li
