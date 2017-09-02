@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filter',
-  // pipe will refilter when even data changes, high performance cost, be carefull using this option
+  // pipe will refilter when ever data changes, high performance cost, be carefull using this option
   pure: false
 })
 export class FilterPipe implements PipeTransform {
