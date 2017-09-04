@@ -15,7 +15,7 @@
       <ul class="list-group">
         <li
           class="list-group-item"
-          *ngFor="let server of servers | filter:filteredStatus :'status'"
+          *ngFor="let server of servers | filter:filteredStatus :'status'| sortlist:'name'"
           [ngClass]="getStatusClasses(server)">
           <span
             class="badge">
@@ -24,7 +24,7 @@
           <!-- add uppercase pipe -->
           <!-- add custom shorten pipe, see shorten.pipe.ts, also register in app.component.ts -->
           <strong>{{ server.name | shorten:20 }}</strong> |
-          {{ server.instanceType | uppercase }} |
+          {{ server.instanceType | uppercase | reverse }} |
           <!-- add date pipe w/parameter -->
           {{ server.started | date:'fullDate'}}
         </li>
